@@ -21,11 +21,19 @@ Official Python SDK for the [Manus AI API](https://open.manus.im/docs).
 
 ## Installation
 
+### From PyPI (Recommended)
+
 ```bash
 pip install manus-sdk
 ```
 
-Or install with optional dependencies:
+### From GitHub Packages
+
+```bash
+pip install --index-url https://pypi.pkg.github.com/lichengwu/simple manus-sdk
+```
+
+### With Optional Dependencies
 
 ```bash
 pip install "manus-sdk[all]"
