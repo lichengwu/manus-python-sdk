@@ -49,11 +49,12 @@ all = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/manus-ai/manus-python-sdk"
-Documentation = "https://github.com/manus-ai/manus-python-sdk#readme"
-Repository = "https://github.com/manus-ai/manus-python-sdk"
-Issues = "https://github.com/manus-ai/manus-python-sdk/issues"
-Changelog = "https://github.com/manus-ai/manus-python-sdk/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/lichengwu/manus-python-sdk"
+Documentation = "https://github.com/lichengwu/manus-python-sdk#readme"
+Repository = "https://github.com/lichengwu/manus-python-sdk"
+Issues = "https://github.com/lichengwu/manus-python-sdk/issues"
+Changelog = "https://github.com/lichengwu/manus-python-sdk/blob/main/CHANGELOG.md"
+PyPI = "https://pypi.org/project/manus-sdk/"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/manus"]

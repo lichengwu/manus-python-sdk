@@ -2,10 +2,12 @@
 
 [![PyPI](https://img.shields.io/pypi/v/manus-sdk.svg)](https://pypi.org/project/manus-sdk/)
 [![Python](https://img.shields.io/pypi/pyversions/manus-sdk.svg)](https://pypi.org/project/manus-sdk/)
-[![License](https://img.shields.io/pypi/l/manus-sdk.svg)](https://github.com/manus-im/manus-python-sdk/blob/main/LICENSE)
-[![CI](https://github.com/manus-im/manus-python-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/manus-im/manus-python-sdk/actions/workflows/ci.yml)
+[![License](https://img.shields.io/pypi/l/manus-sdk.svg)](https://github.com/lichengwu/manus-python-sdk/blob/main/LICENSE)
+[![CI](https://github.com/lichengwu/manus-python-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/lichengwu/manus-python-sdk/actions/workflows/ci.yml)
 
 Official Python SDK for the [Manus AI API](https://open.manus.im/docs).
+
+> 🎉 **v0.1.0** now available on PyPI! Install with `pip install manus-sdk`
 
 ## Features
 
