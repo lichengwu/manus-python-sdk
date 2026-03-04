@@ -6,19 +6,20 @@
 [![CI](https://github.com/lichengwu/manus-python-sdk/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/lichengwu/manus-python-sdk/actions/workflows/ci.yml)
 [![Release](https://img.shields.io/github/v/release/lichengwu/manus-python-sdk?color=green)](https://github.com/lichengwu/manus-python-sdk/releases)
 
-Official Python SDK for the [Manus AI API](https://open.manus.im/docs).
+> ⚠️ **Unofficial Community SDK** - This is a community-maintained Python SDK for the [Manus AI API](https://open.manus.im/docs). Not affiliated with or endorsed by Manus AI.
 
 > 🎉 **v0.1.0** now available on PyPI! Install with `pip install manus-sdk`
 
 ## Features
 
-- 🚀 **OpenAI SDK Compatible** - Use with the official OpenAI Python SDK
+- 🚀 **OpenAI SDK Compatible** - Use with the official OpenAI Python SDK (`openai>=1.100.2`)
 - ⚡ **Async Support** - Full async/await support with `httpx`
-- 📦 **Complete API Coverage** - All Manus API endpoints supported
-- 🔒 **Type Safe** - Full type hints and Pydantic models
-- 🔄 **Streaming** - Support for streaming responses
-- 📄 **File Upload** - Easy file upload with presigned URLs
+- 📦 **Complete API Coverage** - Projects, Tasks, Files, Webhooks, Models
+- 🔒 **Type Safe** - Full type hints with Pydantic models
+- 🔄 **Streaming** - Server-sent events support
+- 📄 **File Upload** - Presigned URL-based file upload
 - 🔔 **Webhooks** - Webhook management and signature verification
+- 🛠️ **Community Maintained** - Built by the community, for the community
 
 ## Installation
 
@@ -365,10 +366,22 @@ mypy src/manus
 
 [MIT License](LICENSE)
 
+## Disclaimer
+
+This is an **unofficial community-maintained SDK** and is not affiliated with, endorsed by, or sponsored by Manus AI. The SDK is provided "as is" without warranty of any kind. Use at your own risk.
+
+For official Manus AI documentation and support, please visit:
+- Official Documentation: https://open.manus.im/docs
+- Official API Reference: https://open.manus.im/docs/api-reference
+
 ## Support
 
-- 📖 Documentation: https://open.manus.im/docs
-- 📚 API Reference: https://open.manus.im/docs/api-reference
-- 🐛 Issues: https://github.com/lichengwu/manus-python-sdk/issues
+- 📖 This SDK Docs: https://github.com/lichengwu/manus-python-sdk#readme
+- 🐛 SDK Issues: https://github.com/lichengwu/manus-python-sdk/issues
 - 📦 PyPI: https://pypi.org/project/manus-sdk/
-- 💬 GitHub Discussions: https://github.com/lichengwu/manus-python-sdk/discussions
+- 💬 Discussions: https://github.com/lichengwu/manus-python-sdk/discussions
+
+### Official Manus Resources
+
+- 🌐 Official Documentation: https://open.manus.im/docs
+- 📚 Official API Reference: https://open.manus.im/docs/api-reference

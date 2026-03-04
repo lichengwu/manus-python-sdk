@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 Manus AI
+Copyright (c) 2026 lichengwu
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,14 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+## Additional Terms
+
+This is an **unofficial community-maintained SDK** for the Manus AI API.
+
+- This SDK is **not affiliated with**, **endorsed by**, or **sponsored by** Manus AI.
+- All trademarks, service marks, and logos related to Manus AI are the property of their respective owners.
+- Use of this SDK is subject to the Manus AI API Terms of Service: https://open.manus.im/terms
+- This SDK is provided "as is" without warranty of any kind, express or implied.

@@ -5,11 +5,34 @@ build-backend = "hatchling.build"
 [project]
 name = "manus-sdk"
 version = "0.1.0"
-description = "The official Python SDK for Manus AI - Integrate AI agents into your workflows"
+description = "Unofficial community Python SDK for Manus AI API - Integrate AI agents into your workflows"
 readme = "README.md"
 license = "MIT"
 authors = [
-    { name = "Manus AI", email = "support@manus.ai" }
+    { name = "lichengwu", email = "lichengwu@example.com" }
+]
+keywords = [
+    "manus",
+    "manus-ai",
+    "ai",
+    "api",
+    "sdk",
+    "async",
+    "openai-compatible",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Typing :: Typed",
+    "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -56,6 +79,7 @@ Issues = "https://github.com/lichengwu/manus-python-sdk/issues"
 Changelog = "https://github.com/lichengwu/manus-python-sdk/blob/main/CHANGELOG.md"
 PyPI = "https://pypi.org/project/manus-sdk/"
 GitHubPackages = "https://github.com/lichengwu?tab=packages&repo_name=manus-python-sdk"
+"Manus AI API" = "https://open.manus.im/docs"
 
 [tool.hatch.publish.index]
 disable = false
