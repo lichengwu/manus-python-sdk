@@ -319,7 +319,7 @@ See the [`examples/`](examples/) directory for complete examples:
 
 ```bash
 # Clone the repository
-git clone https://github.com/manus-im/manus-python-sdk.git
+git clone https://github.com/lichengwu/manus-python-sdk.git
 cd manus-python-sdk
 
 # Create virtual environment
@@ -355,11 +355,11 @@ mypy src/manus
 
 ## Contributing
 
-1. Fork the repository
+1. Fork the repository: https://github.com/lichengwu/manus-python-sdk/fork
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
 3. Commit your changes (`git commit -m 'Add amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+5. Open a Pull Request: https://github.com/lichengwu/manus-python-sdk/compare
 
 ## License
 
@@ -367,6 +367,8 @@ mypy src/manus
 
 ## Support
 
-- Documentation: https://open.manus.im/docs
-- API Reference: https://open.manus.im/docs/api-reference
-- Issues: https://github.com/manus-im/manus-python-sdk/issues
+- 📖 Documentation: https://open.manus.im/docs
+- 📚 API Reference: https://open.manus.im/docs/api-reference
+- 🐛 Issues: https://github.com/lichengwu/manus-python-sdk/issues
+- 📦 PyPI: https://pypi.org/project/manus-sdk/
+- 💬 GitHub Discussions: https://github.com/lichengwu/manus-python-sdk/discussions
