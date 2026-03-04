@@ -55,6 +55,13 @@ Repository = "https://github.com/lichengwu/manus-python-sdk"
 Issues = "https://github.com/lichengwu/manus-python-sdk/issues"
 Changelog = "https://github.com/lichengwu/manus-python-sdk/blob/main/CHANGELOG.md"
 PyPI = "https://pypi.org/project/manus-sdk/"
+GitHubPackages = "https://github.com/lichengwu?tab=packages&repo_name=manus-python-sdk"
+
+[tool.hatch.publish.index]
+disable = false
+
+[tool.hatch.publish.index.github]
+url = "https://pypi.pkg.github.com/lichengwu"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/manus"]

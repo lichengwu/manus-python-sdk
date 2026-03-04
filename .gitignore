@@ -86,3 +86,4 @@ dmypy.json
 
 # Local configuration
 .manus.local.json
+.pypirc
