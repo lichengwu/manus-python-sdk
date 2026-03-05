@@ -1,0 +1,16 @@
+name: Test Actions
+
+on:
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello World
+        run: echo "GitHub Actions is working!"
+
+      - name: Check Python
+        run: |
+          python3 --version
+          echo "Actions test completed successfully!"
