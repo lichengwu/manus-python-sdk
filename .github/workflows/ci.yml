@@ -38,7 +38,7 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest --cov=src/manus --cov-report=xml
+          uv run pytest --cov=src/manus --cov-report=xml
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
@@ -77,15 +77,15 @@ jobs:
 
       - name: Run ruff
         run: |
-          ruff check src/manus tests
+          uv run ruff check src/manus tests
 
       - name: Run black
         run: |
-          black --check src/manus tests
+          uv run black --check src/manus tests
 
       - name: Run mypy
         run: |
-          mypy src/manus
+          uv run mypy src/manus
 
   build:
     name: Build
