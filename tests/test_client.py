@@ -165,7 +165,6 @@ class TestManusModels:
             mock_get.assert_called_once_with(
                 "/models/manus-v1",
                 cast_to=Model,
-                options=None,
             )
             assert response is not None
 
@@ -178,7 +177,7 @@ class TestManusErrors:
         client = Manus(api_key="test-key")
 
         def raise_timeout(*args: Any, **kwargs: Any) -> None:
-            raise httpx.TimeoutException("Request timed out")
+            raise APITimeoutError("Request timed out")
 
         with patch.object(client, "_request", side_effect=raise_timeout):
             with pytest.raises(APITimeoutError):

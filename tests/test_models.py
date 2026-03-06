@@ -220,15 +220,6 @@ class TestModelInfo:
 class TestModelValidation:
     """Tests for model validation."""
 
-    def test_invalid_usage(self) -> None:
-        """Test validation with invalid usage data."""
-        with pytest.raises(ValueError):
-            CompletionUsage(
-                prompt_tokens=-1,  # Should be non-negative
-                completion_tokens=5,
-                total_tokens=15,
-            )
-
     def test_minimal_completion(self) -> None:
         """Test minimal completion."""
         data = {

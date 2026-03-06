@@ -74,13 +74,10 @@ class Stream(Generic[T]):
 
     def __stream__(self) -> Iterator[T]:
         """Stream the response."""
-        event = ""
         data = ""
 
         for line in self._iter_lines():
-            if line.startswith("event:"):
-                event = line[6:].strip()
-            elif line.startswith("data:"):
+            if line.startswith("data:"):
                 data = line[5:].strip()
 
                 # Empty data line means end of stream
