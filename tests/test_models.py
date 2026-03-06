@@ -222,7 +222,7 @@ class TestModelValidation:
 
     def test_invalid_usage(self) -> None:
         """Test validation with invalid usage data."""
-        with pytest.raises(Exception):
+        with pytest.raises(ValueError):
             CompletionUsage(
                 prompt_tokens=-1,  # Should be non-negative
                 completion_tokens=5,

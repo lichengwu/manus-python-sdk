@@ -2,17 +2,16 @@
 
 from __future__ import annotations
 
-import os
-from typing import Any, Dict, Mapping, Optional, Type, Union
+from collections.abc import Mapping
+from typing import Any, Dict, Optional, Type
 
 import httpx
 
 from ._streaming import Stream
 from ._types import RequestOptions
-from ._utils import get_env_var, get_required_env_var, merge_headers, parse_timeout
+from ._utils import get_env_var, merge_headers, parse_timeout
 from .exceptions import (
     APIConnectionError,
-    APIError,
     APIResponseValidationError,
     APIStatusError,
     APITimeoutError,
@@ -169,15 +168,15 @@ class Manus:
         except httpx.TimeoutException as e:
             raise APITimeoutError(
                 message=f"Request timed out: {e}",
-            )
+            ) from e
         except httpx.ConnectError as e:
             raise APIConnectionError(
                 message=f"Failed to connect to API: {e}",
-            )
+            ) from e
         except httpx.RequestError as e:
             raise APIConnectionError(
                 message=f"Request failed: {e}",
-            )
+            ) from e
 
     def _handle_response(self, response: httpx.Response) -> httpx.Response:
         """Handle an HTTP response, raising errors for non-success status codes."""
@@ -306,7 +305,7 @@ class Manus:
             raise APIResponseValidationError(
                 message=f"Failed to parse response as JSON: {e}",
                 response=response,
-            )
+            ) from e
 
         if cast_to is dict:
             return data

@@ -5,9 +5,7 @@ from __future__ import annotations
 from typing import (
     TYPE_CHECKING,
     Any,
-    AsyncIterator,
     Dict,
-    Iterator,
     List,
     Literal,
     Optional,
@@ -21,8 +19,8 @@ from .._streaming import AsyncStream, ChatCompletionChunk, Stream
 from .._types import ChatMessage, CompletionUsage
 
 if TYPE_CHECKING:
-    from ..client import Manus
     from ..async_client import AsyncManus
+    from ..client import Manus
 
 
 class ChatCompletionMessage(BaseModel):
@@ -149,7 +147,6 @@ class ChatCompletions:
         **kwargs: Any,
     ) -> Union[ChatCompletion, Stream[ChatCompletionChunk]]:
         """Create a chat completion."""
-        from ..client import Manus
 
         is_async = type(self._client).__name__ == "AsyncManus"
 
@@ -290,7 +287,6 @@ class ChatCompletions:
         **kwargs: Any,
     ) -> Union[ChatCompletion, AsyncStream[ChatCompletionChunk]]:
         """Create a chat completion asynchronously."""
-        from ..async_client import AsyncManus
 
         body = {
             "messages": messages,

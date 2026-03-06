@@ -2,21 +2,17 @@
 
 from __future__ import annotations
 
+from collections.abc import AsyncIterator, Iterator
 from typing import (
     Any,
-    AsyncIterator,
     Dict,
     Generic,
-    Iterator,
     List,
     Optional,
     TypeVar,
-    cast,
 )
 
 from pydantic import BaseModel, ConfigDict
-
-from ._utils import maybe_await
 
 T = TypeVar("T")
 
@@ -93,7 +89,7 @@ class CursorPaginator(Generic[T]):
             if not page.has_more:
                 break
             # Get next page
-            params = self.get_page()
+            self.get_page()
             # Call the API to get the next page
             # This would be implemented by the calling class
             raise NotImplementedError("Subclasses must implement __iter__")
@@ -116,7 +112,7 @@ class AsyncCursorPaginator(CursorPaginator[T], Generic[T]):
             if not page.has_more:
                 break
             # Get next page
-            params = self.get_page()
+            self.get_page()
             # Call the API to get the next page
             # This would be implemented by the calling class
             raise NotImplementedError("Subclasses must implement __aiter__")

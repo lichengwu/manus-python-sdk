@@ -2,16 +2,15 @@
 
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Any, Dict, List, Optional, Union
+from typing import TYPE_CHECKING, Any, List, Optional, Union
 
 from pydantic import BaseModel, ConfigDict
 
-from .._types import ModelInfo
 from ..pagination import AsyncCursorPage, CursorPage
 
 if TYPE_CHECKING:
-    from ..client import Manus
     from ..async_client import AsyncManus
+    from ..client import Manus
 
 
 def _is_async_client(client: object) -> bool:
@@ -49,7 +48,6 @@ class Models:
         **kwargs: Any,
     ) -> CursorPage[Model]:
         """List available models."""
-        from ..client import Manus
 
         params = {}
         if limit is not None:
@@ -100,7 +98,6 @@ class Models:
 
     def retrieve(self, model_id: str) -> Model:
         """Retrieve a model by ID."""
-        from ..client import Manus
 
         is_async = _is_async_client(self._client)
 
@@ -128,7 +125,6 @@ class Models:
 
     def delete(self, model_id: str) -> bool:
         """Delete a model by ID."""
-        from ..client import Manus
 
         is_async = _is_async_client(self._client)
 

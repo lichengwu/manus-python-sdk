@@ -2,26 +2,23 @@
 
 from __future__ import annotations
 
-import asyncio
 import json
 import re
+from collections.abc import AsyncIterator, Iterator
 from typing import (
     TYPE_CHECKING,
     Any,
-    AsyncIterator,
+    Dict,
     Generic,
-    Iterator,
     List,
     Optional,
     TypeVar,
-    Union,
 )
 
 import httpx
 from pydantic import BaseModel
 
 from ._types import CompletionUsage
-from .exceptions import APIError
 
 if TYPE_CHECKING:
     pass
@@ -105,7 +102,6 @@ class Stream(Generic[T]):
                     yield data  # type: ignore
 
                 # Reset for next event
-                event = ""
                 data = ""
 
     def close(self) -> None:

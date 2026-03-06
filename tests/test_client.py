@@ -3,8 +3,8 @@
 from __future__ import annotations
 
 import os
-from typing import Any, Dict
-from unittest.mock import Mock, patch
+from typing import Any
+from unittest.mock import patch
 
 import httpx
 import pytest
@@ -12,11 +12,9 @@ import pytest
 from manus import (
     APITimeoutError,
     AuthenticationError,
-    ChatCompletion,
     Manus,
     Model,
 )
-from manus.resources.chat import ChatCompletionChoice, ChatCompletionMessage
 
 
 class TestManusClient:

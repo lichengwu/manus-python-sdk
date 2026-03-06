@@ -5,7 +5,8 @@ from __future__ import annotations
 import asyncio
 import os
 import time
-from typing import Any, Callable, Coroutine, Dict, Mapping, Optional, TypeVar, overload
+from collections.abc import Coroutine, Mapping
+from typing import Any, Callable, Dict, Optional, TypeVar, overload
 
 import httpx
 
@@ -134,7 +135,7 @@ class retry_with_exponential_backoff:
 
     def _is_retryable_error(self, error: Exception) -> bool:
         """Check if an error is retryable."""
-        from .exceptions import APIConnectionError, APITimeoutError, APIStatusError
+        from .exceptions import APIConnectionError, APIStatusError, APITimeoutError
 
         if isinstance(error, (APIConnectionError, APITimeoutError)):
             return True

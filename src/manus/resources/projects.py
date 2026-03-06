@@ -7,8 +7,8 @@ from typing import TYPE_CHECKING, Any, Dict, List, Optional, Union
 from pydantic import BaseModel, ConfigDict
 
 if TYPE_CHECKING:
-    from ..client import Manus
     from ..async_client import AsyncManus
+    from ..client import Manus
 
 
 def _is_async_client(client: object) -> bool:

@@ -3,16 +3,16 @@
 from __future__ import annotations
 
 import os
-from typing import Any, Dict
-from unittest.mock import AsyncMock, Mock, patch
+from typing import Any
+from unittest.mock import AsyncMock, patch
 
 import httpx
 import pytest
 
 from manus import (
     APITimeoutError,
-    AuthenticationError,
     AsyncManus,
+    AuthenticationError,
     Model,
 )
 

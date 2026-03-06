@@ -2,15 +2,14 @@
 
 from __future__ import annotations
 
-import os
 from pathlib import Path
-from typing import TYPE_CHECKING, Any, BinaryIO, Dict, List, Optional, Tuple, Union
+from typing import TYPE_CHECKING, Any, BinaryIO, Dict, List, Optional, Union
 
 from pydantic import BaseModel, ConfigDict
 
 if TYPE_CHECKING:
-    from ..client import Manus
     from ..async_client import AsyncManus
+    from ..client import Manus
 
 
 def _is_async_client(client: object) -> bool:

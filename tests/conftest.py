@@ -3,7 +3,8 @@
 from __future__ import annotations
 
 import os
-from typing import Any, Dict, Generator, Optional
+from collections.abc import AsyncGenerator, Generator
+from typing import Any
 
 import pytest
 
@@ -39,7 +40,7 @@ async def async_client(api_key: str, base_url: str) -> AsyncGenerator[AsyncManus
 
 
 @pytest.fixture
-def chat_messages() -> list[Dict[str, Any]]:
+def chat_messages() -> list[dict[str, Any]]:
     """Sample chat messages for testing."""
     return [
         {"role": "system", "content": "You are a helpful assistant."},
@@ -48,7 +49,7 @@ def chat_messages() -> list[Dict[str, Any]]:
 
 
 @pytest.fixture
-def completion_response() -> Dict[str, Any]:
+def completion_response() -> dict[str, Any]:
     """Sample chat completion response."""
     return {
         "id": "chatcmpl-test123",
@@ -74,7 +75,7 @@ def completion_response() -> Dict[str, Any]:
 
 
 @pytest.fixture
-def models_response() -> Dict[str, Any]:
+def models_response() -> dict[str, Any]:
     """Sample models list response."""
     return {
         "object": "list",
@@ -101,7 +102,7 @@ def models_response() -> Dict[str, Any]:
 
 
 @pytest.fixture
-def model_response() -> Dict[str, Any]:
+def model_response() -> dict[str, Any]:
     """Sample single model response."""
     return {
         "id": "manus-v1",
@@ -115,7 +116,7 @@ def model_response() -> Dict[str, Any]:
 
 
 @pytest.fixture
-def error_response() -> Dict[str, Any]:
+def error_response() -> dict[str, Any]:
     """Sample error response."""
     return {
         "error": {

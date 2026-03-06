@@ -2,7 +2,8 @@
 
 from __future__ import annotations
 
-from typing import Any, Dict, List, Mapping, Optional, Sequence, TypeVar, Union
+from collections.abc import Mapping
+from typing import Any, Dict, List, Optional, TypeVar, Union
 
 from pydantic import BaseModel, ConfigDict
 from typing_extensions import NotRequired, Required, TypedDict
