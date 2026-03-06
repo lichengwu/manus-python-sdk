@@ -83,9 +83,7 @@ class AsyncManus:
         self.files = Files(self)
         self.webhooks = Webhooks(self)
 
-    def _prepare_headers(
-        self, default_headers: Optional[Mapping[str, str]]
-    ) -> Dict[str, str]:
+    def _prepare_headers(self, default_headers: Optional[Mapping[str, str]]) -> Dict[str, str]:
         """Prepare the default headers."""
         headers = {
             "Accept": "application/json",
@@ -198,13 +196,9 @@ class AsyncManus:
         if status_code == 400:
             return BadRequestError(message, request_id=request_id, response=response)
         elif status_code == 401:
-            return AuthenticationError(
-                message, request_id=request_id, response=response
-            )
+            return AuthenticationError(message, request_id=request_id, response=response)
         elif status_code == 403:
-            return PermissionDeniedError(
-                message, request_id=request_id, response=response
-            )
+            return PermissionDeniedError(message, request_id=request_id, response=response)
         elif status_code == 404:
             return NotFoundError(message, request_id=request_id, response=response)
         elif status_code == 409:
@@ -212,9 +206,7 @@ class AsyncManus:
         elif status_code == 429:
             return RateLimitError(message, request_id=request_id, response=response)
         elif status_code >= 500:
-            return InternalServerError(
-                message, request_id=request_id, response=response
-            )
+            return InternalServerError(message, request_id=request_id, response=response)
         else:
             return APIStatusError(
                 message, status_code=status_code, request_id=request_id, response=response

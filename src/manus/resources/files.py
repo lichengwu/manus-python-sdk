@@ -176,13 +176,17 @@ class Files:
         if is_async:
             import asyncio
 
-            return asyncio.get_event_loop().run_until_complete(
-                self._client._get(  # type: ignore
-                    "/files",
-                    params=params,
-                    cast_to=object,
+            return (
+                asyncio.get_event_loop()
+                .run_until_complete(
+                    self._client._get(  # type: ignore
+                        "/files",
+                        params=params,
+                        cast_to=object,
+                    )
                 )
-            ).get("data", [])
+                .get("data", [])
+            )
         else:
             return self._client._get(
                 "/files",

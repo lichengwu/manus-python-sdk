@@ -115,9 +115,7 @@ class TestManusChat:
             },
         )
 
-    def test_chat_create_mock(
-        self, client: Manus, mock_response: httpx.Response
-    ) -> None:
+    def test_chat_create_mock(self, client: Manus, mock_response: httpx.Response) -> None:
         """Test chat completion creation with mocked response."""
         with patch.object(client, "_post", return_value=mock_response.json()) as mock_post:
             response = client.chat.completions.create(

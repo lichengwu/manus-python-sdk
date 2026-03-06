@@ -121,9 +121,7 @@ class TestAsyncManusChat:
     async def test_chat_create_async_with_options(self, async_client: AsyncManus) -> None:
         """Test async chat completion with various options."""
         mock_data = {"id": "test"}
-        with patch.object(
-            async_client, "_post", new_callable=AsyncMock, return_value=mock_data
-        ):
+        with patch.object(async_client, "_post", new_callable=AsyncMock, return_value=mock_data):
             response = await async_client.chat.completions.create_async(
                 messages=[{"role": "user", "content": "Hello"}],
                 model="manus-v1",

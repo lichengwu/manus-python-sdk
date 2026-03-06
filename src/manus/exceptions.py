@@ -66,9 +66,7 @@ class BadRequestError(APIStatusError):
         request_id: Optional[str] = None,
         response: Any = None,
     ) -> None:
-        super().__init__(
-            message, status_code=400, request_id=request_id, response=response
-        )
+        super().__init__(message, status_code=400, request_id=request_id, response=response)
 
 
 class AuthenticationError(APIStatusError):
@@ -81,9 +79,7 @@ class AuthenticationError(APIStatusError):
         request_id: Optional[str] = None,
         response: Any = None,
     ) -> None:
-        super().__init__(
-            message, status_code=401, request_id=request_id, response=response
-        )
+        super().__init__(message, status_code=401, request_id=request_id, response=response)
 
 
 class PermissionDeniedError(APIStatusError):
@@ -96,9 +92,7 @@ class PermissionDeniedError(APIStatusError):
         request_id: Optional[str] = None,
         response: Any = None,
     ) -> None:
-        super().__init__(
-            message, status_code=403, request_id=request_id, response=response
-        )
+        super().__init__(message, status_code=403, request_id=request_id, response=response)
 
 
 class NotFoundError(APIStatusError):
@@ -111,9 +105,7 @@ class NotFoundError(APIStatusError):
         request_id: Optional[str] = None,
         response: Any = None,
     ) -> None:
-        super().__init__(
-            message, status_code=404, request_id=request_id, response=response
-        )
+        super().__init__(message, status_code=404, request_id=request_id, response=response)
 
 
 class ConflictError(APIStatusError):
@@ -126,9 +118,7 @@ class ConflictError(APIStatusError):
         request_id: Optional[str] = None,
         response: Any = None,
     ) -> None:
-        super().__init__(
-            message, status_code=409, request_id=request_id, response=response
-        )
+        super().__init__(message, status_code=409, request_id=request_id, response=response)
 
 
 class RateLimitError(APIStatusError):
@@ -141,9 +131,7 @@ class RateLimitError(APIStatusError):
         request_id: Optional[str] = None,
         response: Any = None,
     ) -> None:
-        super().__init__(
-            message, status_code=429, request_id=request_id, response=response
-        )
+        super().__init__(message, status_code=429, request_id=request_id, response=response)
 
 
 class InternalServerError(APIStatusError):
@@ -156,9 +144,7 @@ class InternalServerError(APIStatusError):
         request_id: Optional[str] = None,
         response: Any = None,
     ) -> None:
-        super().__init__(
-            message, status_code=500, request_id=request_id, response=response
-        )
+        super().__init__(message, status_code=500, request_id=request_id, response=response)
 
 
 class APIResponseValidationError(ManusError):
