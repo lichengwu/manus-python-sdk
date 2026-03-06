@@ -28,6 +28,10 @@ jobs:
         with:
           version: "latest"
 
+      - name: Create virtual environment
+        run: |
+          uv venv
+
       - name: Install dependencies
         run: |
           uv pip install -e ".[dev]"
@@ -62,6 +66,10 @@ jobs:
         uses: astral-sh/setup-uv@v3
         with:
           version: "latest"
+
+      - name: Create virtual environment
+        run: |
+          uv venv
 
       - name: Install dependencies
         run: |
